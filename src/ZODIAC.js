@@ -10,7 +10,7 @@ this.YearofBirth=Dob.getFullYear();
 
 }
 
-getMonth(){
+getMonth(){//gets month from the integer arguments passed
 	if(this.MonthofBirth===1){return 'January'};
 	if(this.MonthofBirth===2){return 'February'};
 	if(this.MonthofBirth===3){return 'March'};
@@ -27,7 +27,7 @@ getMonth(){
 
 }
 
-ZodiacSignProperties(){
+ZodiacSignProperties(){//computes the zodaic signs and outputs the result
 if (
 	(this.MonthofBirth===1 && (this.dayofBirth>=20 && this.dayofBirth<=31)) ||
 	(this.MonthofBirth===2) && (this.dayofBirth>0 && (this.dayofBirth<=18)))
@@ -86,7 +86,7 @@ if (
 }
 }
 
-class PersonalInfo extends Zodiac{
+class PersonalInfo extends Zodiac{//a class that inherits Zodiac computes the age of individual
 constructor(YearofBirth,MonthofBirth,dayofBirth,firstname){super();
 if (typeof(YearofBirth)!==Number){throw new Error('wrong value')};
 if (typeof(MonthofBirth)!==Number){throw new Error('wrong value')};
@@ -95,7 +95,7 @@ if (typeof(firstname)!==String){throw new Error('wrong value')};
 const Dob=new Date(Date.UTC(YearofBirth,(MonthofBirth-1),dayofBirth));
 this.MonthofBirth= Dob.getMonth()+1;
 this.dayofBirth=Dob.getDate();
-this.YearofBirth=Dob.getFullYear()-2;
+this.YearofBirth=Dob.getFullYear()-2;//had to do this because output from date was offset by 2 years, couldnt get around that
 this.firstname=firstname;
 	}
 Age(){
