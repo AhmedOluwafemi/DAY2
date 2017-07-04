@@ -104,9 +104,6 @@ Name(){
 }
 
 }
-<<<<<<< HEAD
-console.log(new PersonalInfo(1993,3,21,'oluwafemi').ZodiacSignProperties())
+
 module.exports= PersonalInfo
-=======
-module.exports= PersonalInfo
->>>>>>> 15f6286c4989f8f0c2bcb6cecbe54d3f16c07da5
+
