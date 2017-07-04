@@ -8,7 +8,7 @@ this.YearofBirth=Dob.getFullYear();
 
 }
 
-getMonth(){
+getMonth(){//gets month from the integer arguments passed
 	if(this.MonthofBirth===1){return 'January'};
 	if(this.MonthofBirth===2){return 'February'};
 	if(this.MonthofBirth===3){return 'March'};
@@ -25,7 +25,7 @@ getMonth(){
 
 }
 
-ZodiacSignProperties(){
+ZodiacSignProperties(){//computes the zodaic signs and outputs the result
 if (
 	(this.MonthofBirth===1 && (this.dayofBirth>=20 && this.dayofBirth<=31)) ||
 	(this.MonthofBirth===2) && (this.dayofBirth>0 && (this.dayofBirth<=18)))
@@ -84,13 +84,13 @@ if (
 }
 }
 
-class PersonalInfo extends Zodiac{
+class PersonalInfo extends Zodiac{//a class that inherits Zodiac computes the age of individual
 constructor(YearofBirth,MonthofBirth,dayofBirth,firstname){super();
 
 const Dob=new Date(Date.UTC(YearofBirth,(MonthofBirth-1),dayofBirth));
 this.MonthofBirth= Dob.getMonth()+1;
 this.dayofBirth=Dob.getDate();
-this.YearofBirth=Dob.getFullYear()-2;
+this.YearofBirth=Dob.getFullYear()-2;//had to do this because output from date was offset by 2 years, couldnt get around that
 this.firstname=firstname;
 	}
 Age(){
@@ -104,5 +104,9 @@ Name(){
 }
 
 }
+<<<<<<< HEAD
 console.log(new PersonalInfo(1993,3,21,'oluwafemi').ZodiacSignProperties())
 module.exports= PersonalInfo
+=======
+module.exports= PersonalInfo
+>>>>>>> 15f6286c4989f8f0c2bcb6cecbe54d3f16c07da5
