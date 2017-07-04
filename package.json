@@ -1,0 +1,25 @@
+{
+  "name": "zodiac",
+  "version": "1.0.0",
+  "description": "simple zodiac sign calculator",
+  "main": "src/ZODIAC",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "oop javascript"
+  },
+  "keywords": [
+    "\u001b[A\u001b[A\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C"
+  ],
+  "author": "\u001b[A\u001b[BAHMED OLUWAFEMI",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}

@@ -1,5 +1,8 @@
 class Zodiac{
 constructor(YearofBirth,MonthofBirth,dayofBirth){
+if (typeof(YearofBirth)!==Number){throw new Error('wrong value')};
+if (typeof(MonthofBirth)!==Number){throw new Error('wrong value')};
+if (typeof(dayofBirth)!==Number){throw new Error('wrong value')};
 const Dob=new Date(YearofBirth,(MonthofBirth-1),dayofBirth);
 this.MonthofBirth= Dob.getMonth()+1;
 this.dayofBirth=Dob.getDate();
@@ -85,6 +88,10 @@ if (
 
 class PersonalInfo extends Zodiac{
 constructor(YearofBirth,MonthofBirth,dayofBirth,firstname){super();
+if (typeof(YearofBirth)!==Number){throw new Error('wrong value')};
+if (typeof(MonthofBirth)!==Number){throw new Error('wrong value')};
+if (typeof(dayofBirth)!==Number){throw new Error('wrong value')};
+if (typeof(firstname)!==String){throw new Error('wrong value')};
 const Dob=new Date(Date.UTC(YearofBirth,(MonthofBirth-1),dayofBirth));
 this.MonthofBirth= Dob.getMonth()+1;
 this.dayofBirth=Dob.getDate();
@@ -102,3 +109,4 @@ Name(){
 }
 
 }
+module.exports= PersonalInfo
