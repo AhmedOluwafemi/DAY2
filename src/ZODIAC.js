@@ -90,7 +90,7 @@ constructor(YearofBirth,MonthofBirth,dayofBirth,firstname){super();
 const Dob=new Date(Date.UTC(YearofBirth,(MonthofBirth-1),dayofBirth));
 this.MonthofBirth= Dob.getMonth()+1;
 this.dayofBirth=Dob.getDate();
-this.YearofBirth=Dob.getFullYear()-2;//had to do this because output from date was offset by 2 years, couldnt get around that
+this.YearofBirth=Dob.getFullYear();//had to do this because output from date was offset by 2 years, couldnt get around that
 this.firstname=firstname;
 	}
 Age(){
@@ -104,6 +104,7 @@ Name(){
 }
 
 }
+console.log(new PersonalInfo(1993,1,29).getMonth())
 
 module.exports= PersonalInfo
 

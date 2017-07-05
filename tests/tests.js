@@ -22,4 +22,18 @@ let y= new myApp(1993,7,21)
 		assert.deepEqual(y.ZodiacSignProperties(),CANCER={'ZodiacSign':'CANCER','Elements':'WATER','COLOR':'WHITE','DAY':'SATURDAY AND THURSDAY'})
 	})
 })
+describe('Age',()=>{
+	it('should return 24 for birthdate:1993,29,1',
+		()=>{
+			let x=new myApp(1993,1,29,'oluwafemi')
+			assert.deepEqual(x.Age(),24)
+		})
+})
+describe('Month',()=>{
+	it('should return January for 1993,29,1',
+		()=>{
+			let x=new myApp(1993,1,29,'oluwafemi')
+			assert.deepEqual(x.getMonth(),'January')
 
+	})
+})
